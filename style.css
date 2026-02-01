@@ -178,4 +178,120 @@ html{
     .Courses{
         margin-top: -3%;
     }
+
+    .Right-slider .center .image-center{
+        width: 250px;
+        right: -.5%;
+    }
 }
+
+@media (max-width:1025px){
+    .Left-Slider{
+        max-width: 210px;
+        height: 1400px;
+    }
+    .Left-Slider .Logo .Icon-Image{
+        margin-left: 4%;
+        margin-bottom: 30%;
+    }
+    .Left-Slider .Logo .Logo-Text{
+        display: none;
+    }
+    .cards{
+        flex-wrap: wrap;
+        position: relative;
+        scroll-snap-align: start;
+    }
+    .cardss{
+        height: 300px;
+        position: relative;
+    }
+    .cardss img{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        position: absolute;
+        right: 4%;
+        top: 15%;
+        background-color: #0c98fd;
+    }
+}
+
+@media (max-width:821px){
+    .Left-Slider{
+        width: 10px;
+        height: 90vh;
+    }
+    
+    .Left-Slider .Logo img{
+        display: none;
+    }
+    
+    .Left-Slider .Icons-list ul li a span{
+        display: none;
+    }
+    
+    .Left-Slider .Icons-list{
+        margin-top: 200px;
+    }
+    
+    .Icons-list ul li {
+        width: 100%;
+    }
+
+    .cards{
+        width: 500px;
+    }
+    
+    .cardss{
+        flex-grow: 0;
+        width: 100%;
+    }
+    
+    .Right-slider .center .image-center{
+        right: 20%;
+        top: 50%;
+    }
+}
+
+@media (max-width:481px){
+    html{
+        font-size: 1rem;
+    }
+
+    .body{
+        flex-direction: column;
+        overflow-y: auto;
+        height: 100vh;
+    }
+
+    .Left-Slider{
+        display: none;
+    }
+
+    .Right-slider .center{
+        margin-left: 0%;
+        text-align: center;
+        padding-top: 200px;
+    } 
+    
+    .Right-slider .center .image-center{
+        width: 200px;
+        margin: 0 auto;
+        margin-right: 5%;
+        top: 5%;
+    }
+
+    .cards{
+        margin:auto;
+        width: 98%;
+        margin-left: 0;
+        padding-left: 0;
+        justify-content: center;
+        height: 200px;
+    }
+
+    .cardss{
+        height: 200px;
+    }
+} 
