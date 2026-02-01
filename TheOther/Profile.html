@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity Platform - Profile</title>
+    <link rel="stylesheet" href="BootStrap-Station/css/bootstrap.css">
+    <style>
+        html{
+            scroll-behavior: smooth;
+            font-size: 20px;
+        }
+        body{
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        body .body .top .Icons-Items {
+            position: fixed;
+            top: 0;
+            justify-self: center;
+            width: 100%;
+            background-color: white;
+        }
+        body .body .top .Icons-Items ul{
+            display: flex;
+            gap: 4em;
+            padding: 1em;
+            justify-content: center;
+            align-items: center;
+        }
+        body .body .top .Icons-Items ul li{
+            list-style: none;
+            padding: .3em .6em;
+            border-radius: .4rem;
+            border: 1px solid #007bff;
+            transition: all .3s ease;
+        }
+        body .body .top .Icons-Items ul li:hover{
+            background-color: #007bff;
+            border: 1px solid #007bff;
+        }
+        body .body .top .Icons-Items ul li:hover a{
+            color: white;
+        }
+        .Icons-Of-Profile{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            font-size: 130px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #ededed;
+            box-shadow: inset 0px 5px 10px rgba(0, 0, 0, .5);
+            margin: 0 auto;
+            margin-top: 20px;
+            margin-bottom: 40px;
+        }
+        .Info{
+            margin-top: 10%;
+        }
+        .Info-li{
+            background-color: #007bff;
+        }
+        .Info-li a{
+            color: white;
+            text-decoration: none;
+        }
+        @property --angle{
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+        .NumOfViewsC{
+            --angle: 0deg;
+            background-image: linear-gradient(var(--angle) , blue ,green , red );
+            color: transparent;
+            background-clip: text;
+            -webkit-background-clip: text;
+            animation: flow 3s linear infinite;
+        }
+        .Dashboards{
+            margin-top: 20%;
+        }
+        @keyframes flow {
+            from{ --angle: 0deg; }
+            to{ --angle: 360deg; }
+        }
+        .donat{
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            margin: auto;
+            margin-top: 5%;
+            background-image: conic-gradient( #007bff 0% 70%, #ededed 70% 100%);
+            position: relative;
+        }
+        .donat::before{
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background-color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="body">
+        <div class="top">
+            <div class="Icons-Items">
+                <ul>
+                    <li class="Info-li"><a href="#Info" >information</a></li>
+                    <li><a href="#Dash">Dashboard</a></li>
+                    <li><a href="#Seti">Settings</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="Info" id="Info">
+            <div class="Icons-Of-Profile">👤</div>
+            <h1>information</h1>
+            <input type="text" value="Name Of Profile" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px;">
+            <input type="text" value="Number Of Profile" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px">
+            <input type="text" value="Email@gmail.com" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px">
+            <input type="text" value="Code" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px">
+            <a value="Code" disabled class="form-control" href="#Seti" style="
+                box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px
+            ">Edit The Profile</a>
+        </div>
+        <div class="Dashboards" id="Dash">
+            <h1>Dashboard</h1>
+            <div class="Dash-1">
+                <h5>Your Courses</h5>
+                <span class="secoundry">You Have Whatched A <span class="NumOfViewsC" id="NumOfViewsI">#$# </span> Courses</span>
+                <div class="donat"></div>
+                <div class="Infra">Blue = Whatched <br> White = No-Whatched</div>
+            </div>
+        </div>
+        <div class="Settings" id="Seti" style="margin-top: 20%;">
+            <h2 style="display: inline-block;">Settings</h2>
+            <input type="checkbox" id="Edit">
+            <label for="Edit">Enable Edit Mode</label>
+            <input type="text" value="Name Of Profile" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px;">
+            <input type="text" value="Number Of Profile" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px">
+            <input type="text" value="Email@gmail.com" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px">
+            <input type="text" value="Code" disabled class="form-control" style="box-shadow: inset 0px 0px 5px #00000056; width: min(40%, 500px); text-align: center; margin: 0 auto; margin-bottom: 20px">
+        </div>
+    </div>
+    
+    <script src="BootStrap-Station/js/popper.min.js"></script>
+    <script src="BootStrap-Station/js/jquery.js"></script>
+    <script src="BootStrap-Station/js/bootstrap.js"></script>
+</body>
+</html>
