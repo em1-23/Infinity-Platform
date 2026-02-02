@@ -6,6 +6,10 @@
     <title>Infinity Store</title>
     <link rel="stylesheet" href="BootStrap-Station/css/bootstrap.css">
     <style>
+        html{
+            font-size: 18px;
+            scroll-behavior: smooth;
+        }
         .body{
             text-align: center;
             margin: auto;
@@ -54,28 +58,126 @@
             font-size: 30px;
             margin-bottom: 2%;
         }
+        .bgh1{
+            font-size: 40px;
+        }
+        .top{
+            position: sticky;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+        .book-Subject{
+            border-radius: .5rem;
+            background-color: #6c757d;
+            padding: 1rem;
+            padding-right: 50px; 
+            height: 320px;
+            position: relative;
+        }
+        .book-Subject h4{
+            font-size: 18px;
+        }
+        .Price{
+            position: absolute;
+            right: 25px;
+            bottom: 14px;
+            border-radius: .5rem;  
+        }
+        .top ul br{
+            display: none;
+        }
+        @media (max-width: 1150px) {
+            .top{
+                flex-wrap: wrap ;
+            }
+            .top ul{
+                gap: 1rem;
+            }
+        }
+        @media (max-width: 700px) {
+            .top{
+                flex-wrap: wrap ;
+            }
+            .top ul{
+                gap: .5rem;
+            }
+            .top ul li{
+                scale: .8;
+            }
+            .top ul button{
+                scale: .8;
+            }
+        }
+        @media (max-width: 700px) {
+            html{
+                font-size: 22px;
+            }
+            .top{
+                position: relative;
+                top: 0;            
+                left: 0;
+            }
+            .top ul{
+                flex-wrap: wrap;
+                gap: 2em;
+                padding-left: 0;
+                justify-content: center;
+            }
+            .top ul br{
+                display: inline-block;
+            }
+        }
 </style>
 </head>
 <body>
     <div class="body">
         <div class="top">
-            <h1>Infinity Store</h1>
+            <h1 class="badge bgh1 bg-secondary text-light">Infinity <span class="badge bg-primary text-light">Store</span></h1>
             <ul>
                 <li><a href="#AboutUS">About US</a></li>
                 <li><a href="#MBook">Most Popular</a></li>
-                <li><a href="#ABook">The Book Arena</a></li>
+                <li><a href="#ABook">The Book Arena</a></li><br>
                 <button class="btn btn-outline-primary"><a href="Log-In.html">Log In</a></button>
             </ul>
         </div>
         <div class="center">
-            <h2 id="AboutUS" class="badge badg bg-primary text-white">About Us</h2>
-            <p>Welcome to Infinity Store, your number one source for all of the books. <br>
-                 We're dedicated to giving you the very best of literature, with a focus on variety, quality, and customer service.</p>
-            <p>Founded in 2024, Infinity Store has come a long way from its beginnings. <br>
-                 When we first started out, our passion for reading drove us to start our own business.</p>
-            <p>We hope you enjoy our products as much as we enjoy offering them to you . <br>
-                 If you have any questions or comments, please don't hesitate to contact us.</p>
+            <h2 id="AboutUS" class="badge badg bg-primary text-white" style="margin-top: 5%;">About Us</h2>
+            <div class="aboutAS">
+                <p>Welcome to Infinity Store, your number one source for all of the books for <div class="badge bg-secondary text-light">Infinity</div> <div class="badge bg-primary text-light">Platform</div> <br>
+                We're dedicated to giving you the very best of literature, with a focus on variety, quality, and customer service.</p>                
+                <p>Founded in 2024, Infinity Store has come a long way from its beginnings. <br>
+                When we first started out, our passion for reading drove us to start our own business.</p>
+                <p>We hope you enjoy our products as much as we enjoy offering them to you . <br>
+                If you have any questions or comments, please don't hesitate to contact us.</p>
+            </div>
+            <h2 class="badge badg bg-info text-white" style="margin-top: 20%;" id="MBook">Most Popular Books</h2>        
+            <p>Here are some of our most popular books that readers love:</p>
+            <div class="books">
+                <div class="book-Subject m-2 d-inline-block">
+                    <h4 class="badge bg-bNA bg-danger text-light">Book-Name <span class="badge bg-primary text-light">Author</span></h4><br>
+                    <img src="../Image/TEST.png" class="w-60 h-60" alt="Book Image">
+                    <p style="width: 50px;" class="Price bg-info text-light">#$#</p>
+                    <button class="btn btn-primary btn-buy" style="position: absolute; bottom: 10px; left: 30px;"><a href="" class="text-light">Buy Now</a></button>
+                </div>
+            </div>
+            <h2 class="badge badg bg-success text-white" style="margin-top: 20%;" id="ABook">Book Arena</h2>
+            <p>Explore our extensive collection of books across various genres:</p>
+            <div class="book-arena">
+                <div class="book-Subject m-2 d-inline-block">
+                    <h4 class="badge bg-bNA bg-danger text-light">Book-Name <span class="badge bg-primary text-light">Author</span></h4><br>
+                    <img src="../Image/TEST.png" class="w-60 h-60" alt="Book Image">
+                    <p style="width: 50px;" class="Price bg-info text-light">#$#</p>
+                    <button class="btn btn-primary btn-buy" style="position: absolute; bottom: 10px; left: 30px;"><a href="" class="text-light">Buy Now</a></button>
+                </div>
+            </div> 
         </div>
+        <footer style="margin-top: 30%;" class="footer bg-dark text-light">
+            <p>&copy; 2024 Infinity Store. All rights reserved.</p>
+            <span class="badge bg-primary">By <span style="font-size: 19px;" class="badge bg-secondary p-2 text-light">Mahmoud Ahmed</span></span>
+            <br>
+            <h3 style="font-size: 18px; margin-top: 2%;" class="badge bg-secondary text-light">Infinity <span class="badge bg-primary text-light">Store</span></h3>
+        </footer>
     </div>
 
     <script>
